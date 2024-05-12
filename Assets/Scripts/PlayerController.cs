@@ -9,6 +9,11 @@ public class PlayerController : MonoBehaviour
 
     public Animator myAnim;
 
+    void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Update()
     {
         theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveSpeed;
