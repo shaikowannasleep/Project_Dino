@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3701663027873951611}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.37, y: -1.27, z: 0.010720918}
+  m_LocalPosition: {x: 8.37, y: 0.54, z: 0.010720918}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -91,7 +91,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae8c5e455f0e769478014a19099fc274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaToLoad: A
+  areaToLoad: Test2
+  areaTransitionName: 
+  theEntrance: {fileID: 5469017762838840697}
 --- !u!1 &9025209774404945625
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5714331458432734645}
+  - component: {fileID: 5469017762838840697}
   m_Layer: 0
   m_Name: Area Entrance
   m_TagString: Untagged
@@ -117,9 +120,22 @@ Transform:
   m_GameObject: {fileID: 9025209774404945625}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.08, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6701949994567139223}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5469017762838840697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9025209774404945625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db0b183795e613408b813a94d882cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionName: 

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,5 +12,7 @@ public class AreaEntrance : MonoBehaviour
         {
             PlayerController.instance.transform.position = transform.position;
         }
+
+    
     }
 }
