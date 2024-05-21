@@ -5,39 +5,34 @@ using UnityEngine.UI;
 
 public class UIFade : MonoBehaviour
 {
-  //  public static UIFade instance;
-   
-
-    private static UIFade instance;
-    public static UIFade GetInstance()
-    {
-        if (instance == null)
-        {
-            instance = FindObjectOfType<UIFade>();
-            if (instance == null)
-            {
-                GameObject obj = new GameObject("UIFade");
-                instance = obj.AddComponent<UIFade>();
-            }
-        }
-        return instance;
-    }
+    public static UIFade instance;
 
     public Image fadeScreen;
     public float fadeSpeed;
 
-     [SerializeField]
-    private bool shouldFadeToBlack;
-    [SerializeField]
-    private bool shouldFadeFromBlack;
+    public bool shouldFadeToBlack;
+    public bool shouldFadeFromBlack;
 
+    // Use this for initialization
     void Start()
     {
-       // instance = this;
-        // this may get error then 
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            if (instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
+        
+        // instance = this;
+        DontDestroyOnLoad(gameObject);
 
     }
-
     void Update()
     {
         if (shouldFadeToBlack)

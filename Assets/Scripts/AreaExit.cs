@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class AreaExit : MonoBehaviour
 {
+
     public string areaToLoad;
     public string areaTransitionName;
     public AreaEntrance theEntrance;
 
     public float waitToLoad = 1f;
-    bool shouldLoadAfterFade;
+    //link to Uifade
+    bool shouldLoadAfterFade; 
 
     void Start()
     {
@@ -35,6 +37,7 @@ public class AreaExit : MonoBehaviour
         if (other.tag == "Player")
         {
             shouldLoadAfterFade = true;
+            UIFade.instance.FadeToBlack();
             PlayerController.instance.areaTransitionName = areaTransitionName;
         }
     }

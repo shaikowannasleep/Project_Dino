@@ -11,7 +11,17 @@ public class PlayerController : MonoBehaviour
 
     public static PlayerController instance;
     public string areaTransitionName;
+
+    [SerializeField]
+    private bool canMove = true;
+
     void Awake()
+    {
+      
+    }
+
+
+    void Start()
     {
         if (instance == null)
         {
@@ -19,19 +29,26 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            if (instance != this)
+            {
+                Destroy(gameObject);
+            }
         }
-    }
 
-
-    void Start()
-    {
         DontDestroyOnLoad(gameObject);
     }
 
     void Update()
     {
-        theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveSpeed;
+        if (canMove)
+        {
+            theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveSpeed;
+
+        }
+        else
+        {
+            theRB.velocity = Vector2.zero;
+        }
 
         myAnim.SetFloat("moveX", theRB.velocity.x);
         myAnim.SetFloat("moveY", theRB.velocity.y);
@@ -42,4 +59,7 @@ public class PlayerController : MonoBehaviour
             myAnim.SetFloat("lastMoveY", Input.GetAxisRaw("Vertical"));
         }
     }
+
+
+
 }
