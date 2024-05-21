@@ -149,7 +149,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &310431973868424198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +166,6 @@ MonoBehaviour:
   moveSpeed: 10
   myAnim: {fileID: 2657619265216600077}
   areaTransitionName: 
-  canMove: 1
 --- !u!95 &2657619265216600077
 Animator:
   serializedVersion: 5
