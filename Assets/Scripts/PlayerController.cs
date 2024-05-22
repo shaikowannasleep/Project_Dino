@@ -12,8 +12,10 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
     public string areaTransitionName;
 
-    [SerializeField]
-    private bool canMove = true;
+    public bool canMove = true;
+
+    // if it was Serialized private 
+    // it couldnot be accessed by the dialog manager as i was intended to
 
     void Awake()
     {
