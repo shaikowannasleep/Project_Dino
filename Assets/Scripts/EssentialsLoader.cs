@@ -8,6 +8,7 @@ public class EssentialsLoader : MonoBehaviour
     // obviously need to put in the UI canvas ( UIScreen) created.
     public GameObject UIScreen; 
     public GameObject player;
+    public GameObject gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,21 @@ public class EssentialsLoader : MonoBehaviour
             PlayerController clone = Instantiate(player).GetComponent<PlayerController>();
             PlayerController.instance = clone;
         }
+
+        if (GameManager.instance == null)
+        {
+            Instantiate(gameManager);
+        }
+
+
+
+
+
+
+
+
+
+
     }
 
 }
