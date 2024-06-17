@@ -76,7 +76,8 @@ public class DialogManager : MonoBehaviour
         dialogBox.SetActive(true);
         justStarted = true;
         nameBox.SetActive(isPerson);
-        PlayerController.instance.canMove = false;
+        //  PlayerController.instance.canMove = false;
+        GameManager.instance.dialogActive = true;
     }
 
 

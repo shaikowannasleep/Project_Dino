@@ -7,9 +7,30 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public CharacterStat[] playerStats;
 
+
+
+    public bool gameMenuOpen;
+    public bool dialogActive;
+    public bool fadingBetweenAreas;
+   // public bool activeInventoryOpen;
+
     void Start()
     {
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
+
+    void Update()
+    {
+        if (gameMenuOpen || dialogActive || fadingBetweenAreas )
+        {
+            PlayerController.instance.canMove = false;
+        }
+        else
+        {
+            PlayerController.instance.canMove = true;
+        }
+    }
+
+
 }

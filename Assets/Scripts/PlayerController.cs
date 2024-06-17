@@ -1,29 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
+public enum PlayerState
+{
+    walk,
+    attack,
+}
 
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D theRB;
-    public float moveSpeed;
-
+    [SerializeField]
+    private float moveSpeed = 10f;
+    public PlayerState currentState;
     public Animator myAnim;
 
     public static PlayerController instance;
     public string areaTransitionName;
 
     public bool canMove = true;
-
+    private Vector3 change;
     // if it was Serialized private 
     // it couldnot be accessed by the dialog manager as i was intended to
 
+    // i want the player can be able to move fast 
+    private bool isSpeedIncreased = false;
+
+
     void Awake()
-    {
-      
-    }
-
-
-    void Start()
     {
         if (instance == null)
         {
@@ -40,28 +45,89 @@ public class PlayerController : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+
+    void Start()
+    {
+       
+    }
+
     void Update()
     {
         if (canMove)
         {
             theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveSpeed;
-
+            change = Vector3.zero;
+            change.x = Input.GetAxisRaw("Horizontal");
+            change.y = Input.GetAxisRaw("Vertical");
+            if (Input.GetButtonDown("attack") && currentState != PlayerState.attack )
+            {
+                StartCoroutine(AttackCoroutine());
+            }
+            if (currentState == PlayerState.walk)
+            {
+                UpdateAnimationAndMove();
+            }
         }
         else
         {
             theRB.velocity = Vector2.zero;
         }
-
-        myAnim.SetFloat("moveX", theRB.velocity.x);
-        myAnim.SetFloat("moveY", theRB.velocity.y);
-
-        if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
-        {
-            myAnim.SetFloat("lastMoveX", Input.GetAxisRaw("Horizontal"));
-            myAnim.SetFloat("lastMoveY", Input.GetAxisRaw("Vertical"));
-        }
     }
 
+    private IEnumerator AttackCoroutine()        //runs in parallel to something
+    {
+        myAnim.SetBool("attacking", true);      //setting animation bool to true
+        currentState = PlayerState.attack;
+        yield return null;                                    //waits 1 frame
+        myAnim.SetBool("attacking", false);
+        yield return new WaitForSeconds(.3f);                 //waits .3 seconds 
+        currentState = PlayerState.walk;
+    }
+    void UpdateAnimationAndMove()
+    {
+        if (change != Vector3.zero) 
+        {
+            MoveCharacter();
+            myAnim.SetFloat("Horizontal", change.x);
+            myAnim.SetFloat("Vertical", change.y);
+            myAnim.SetBool("isMoving", true);
+        }
+        else
+        {
+            myAnim.SetBool("isMoving", false);
+        }
+    }
+    [SerializeField]
+    private float speedMultiplier = 4f; 
 
+    void MoveCharacter()
+    {
+        change.Normalize();
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+           // IncreasedSpeed();
+        }
+        theRB.MovePosition(
+             transform.position + (Time.deltaTime * moveSpeed * change)
+            );
+    }
+
+   
+  
+    public void IncreasedSpeed()
+    {
+        isSpeedIncreased = !isSpeedIncreased;
+
+        if (isSpeedIncreased)
+        {
+            // Tăng tốc độ di chuyển lên
+            PlayerController.instance.moveSpeed *= speedMultiplier;
+        }
+        else
+        {
+            // Đặt lại tốc độ di chuyển về bình thường
+            PlayerController.instance.moveSpeed /= speedMultiplier;
+        }
+    }
 
 }

@@ -9,7 +9,7 @@ public class EssentialsLoader : MonoBehaviour
     public GameObject UIScreen; 
     public GameObject player;
     public GameObject gameManager;
-
+    public GameObject audioMan;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,13 +26,17 @@ public class EssentialsLoader : MonoBehaviour
             PlayerController.instance = clone;
         }
 
+       
         if (GameManager.instance == null)
         {
             Instantiate(gameManager);
         }
 
 
-
+        if (AudioManager.instance == null)
+        {
+            AudioManager.instance = Instantiate(audioMan).GetComponent<AudioManager>();
+        }
 
 
 
