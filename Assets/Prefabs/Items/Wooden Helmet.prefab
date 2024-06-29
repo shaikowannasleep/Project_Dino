@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6424946846926934137
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -2281305790041406419, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149509994477346646, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.8579397
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149509994477346646, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7537816
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149509994477346646, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149509994477346646, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149509994477346646, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149509994477346646, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149509994477346646, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149509994477346646, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149509994477346646, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149509994477346646, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115444559045778320, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1916044957, guid: 0bc4ed27aef38a44bb72e80f9beb5326, type: 3}
+    - target: {fileID: 5335253762381337855, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335253762381337855, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: isItem
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335253762381337855, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: affectHP
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335253762381337855, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: isArmour
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335253762381337855, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: itemName
+      value: Wooden Helmet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335253762381337855, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: affectStr
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335253762381337855, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: itemSprite
+      value: 
+      objectReference: {fileID: -1916044957, guid: 0bc4ed27aef38a44bb72e80f9beb5326, type: 3}
+    - target: {fileID: 5335253762381337855, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: description
+      value: Avoid Bonk
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335253762381337855, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: armorStrength
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335253762381337855, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: amountToChange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335253762381337855, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: weaponStrength
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336077116430109324, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+      propertyPath: m_Name
+      value: Wooden Helmet
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}

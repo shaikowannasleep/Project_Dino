@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 805839753515021909}
   m_Layer: 0
   m_Name: right hit box
-  m_TagString: Untagged
+  m_TagString: swordHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 4102799460220145449}
   m_Layer: 0
   m_Name: down hit box
-  m_TagString: Untagged
+  m_TagString: swordHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 8866650462764179511}
   m_Layer: 0
   m_Name: left hit box
-  m_TagString: Untagged
+  m_TagString: swordHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 7430776931170574704}
   m_Layer: 0
   m_Name: up hit box
-  m_TagString: Untagged
+  m_TagString: swordHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

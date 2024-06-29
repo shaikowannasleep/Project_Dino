@@ -34,6 +34,7 @@ public class DialogActivator : MonoBehaviour
         if (canActivate && Input.GetButtonDown("Fire1") && !DialogManager.instance.dialogBox.activeInHierarchy)
         {
             DialogManager.instance.ShowDialog(lines, isPerson);
+            DialogManager.instance.ShouldActivateQuestAtEnd(questToMark, markComplete);
         }
     }
 
@@ -46,6 +47,7 @@ public class DialogActivator : MonoBehaviour
         }
     }
 
+   
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == "Player")

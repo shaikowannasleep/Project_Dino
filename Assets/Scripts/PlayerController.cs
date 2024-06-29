@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.Playables;
 public enum PlayerState
 {
+    [Description(" Walking state ")]
     walk,
+    [Description(" Attack state ")]
     attack,
 }
 
@@ -49,6 +52,14 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
        
+    }
+
+    private Vector3 bottomLeftLimit;
+    private Vector3 topRightLimit;
+    public void SetBounds(Vector3 botLeft, Vector3 topRight)
+    {
+        bottomLeftLimit = botLeft + new Vector3(.5f, 1f, 0f);
+        topRightLimit = topRight + new Vector3(-.5f, -1f, 0f);
     }
 
     void Update()

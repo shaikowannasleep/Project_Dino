@@ -19,6 +19,10 @@ public class DialogManager : MonoBehaviour
     public static DialogManager instance;
 
 
+    private string questToMark;
+    private bool markQuestComplete;
+    private bool shouldMarkQuest;
+
     void Start()
     {
         if (instance == null)
@@ -50,6 +54,20 @@ public class DialogManager : MonoBehaviour
                         dialogBox.SetActive(false);
                         // allow player move outside the dialog
                         PlayerController.instance.canMove = true;
+                        GameManager.instance.dialogActive = false;
+
+                        if (shouldMarkQuest)
+                        {
+                            shouldMarkQuest = false;
+                            if (markQuestComplete)
+                            {
+                                QuestManager.instance.MarkQuestComplete(questToMark);
+                            }
+                            else
+                            {
+                                QuestManager.instance.MarkQuestIncomplete(questToMark);
+                            }
+                        }
                     }
                     else
                     {
@@ -76,7 +94,6 @@ public class DialogManager : MonoBehaviour
         dialogBox.SetActive(true);
         justStarted = true;
         nameBox.SetActive(isPerson);
-        //  PlayerController.instance.canMove = false;
         GameManager.instance.dialogActive = true;
     }
 
@@ -90,6 +107,14 @@ public class DialogManager : MonoBehaviour
             currentLine++;
         }
        
+    }
+
+    public void ShouldActivateQuestAtEnd(string questName, bool markComplete)
+    {
+        questToMark = questName;
+        markQuestComplete = markComplete;
+
+        shouldMarkQuest = true;
     }
 
     // Check if the player has input to continue the dialogue

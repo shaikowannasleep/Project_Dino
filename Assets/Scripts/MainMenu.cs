@@ -7,12 +7,30 @@ public class MainMenu : MonoBehaviour
 {
 
     public string newGameScene;
-    public void startGame()
+
+
+    public GameObject continueButton;
+
+    public string loadGameScene;
+
+    // Use this for initialization
+    void Start()
     {
-       // SceneManager.LoadScene("Town");
+        if (PlayerPrefs.HasKey("Current_Scene"))
+        {
+            continueButton.SetActive(true);
+        }
+        else
+        {
+            continueButton.SetActive(false);
+        }
     }
 
 
+    public void Continue()
+    {
+        SceneManager.LoadScene(loadGameScene);
+    }
 
     public void NewGame()
     {

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1957840491793314182}
   - component: {fileID: 1957840491793313913}
+  - component: {fileID: -8229830855097548531}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -31,6 +32,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1957840490948112069}
+  - {fileID: 2818009589709805764}
+  - {fileID: 4270626328087074128}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1957840491793313913
@@ -47,6 +50,209 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats:
   - {fileID: 3245443713931192035}
+  - {fileID: 1888411072263349824}
+  - {fileID: 2909280416038406082}
+  gameMenuOpen: 0
+  dialogActive: 0
+  fadingBetweenAreas: 0
+  shopActive: 0
+  itemsHeld:
+  - Health Potion
+  - Sword
+  - Mana Potion
+  - 
+  - Key
+  - 
+  - 
+  - 
+  - Amror Leather
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Amror Leather
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Wooden Helmet
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  numberOfItems: 01000000010000000100000000000000010000000000000001000000000000000100000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  referenceItems:
+  - {fileID: 5335253762381337855, guid: a7b4b1d88b65cf34baa3634512ccd0bb, type: 3}
+  - {fileID: 1440179815327982409, guid: 934f81e70c009c740a3febe290ddabb4, type: 3}
+  - {fileID: 533556707152597918, guid: 1143cd5968336d04ebe73124913ccd85, type: 3}
+  - {fileID: 386613483468211950, guid: 26e1e121bffd9124991f910e445b649e, type: 3}
+  - {fileID: 1905199547161574729, guid: 6ce0b4276c23a3943afd57f5c01fe0cf, type: 3}
+  - {fileID: 1379049377784841350, guid: 50a6941ae74837f49aa6b31199011c95, type: 3}
+  - {fileID: 6235733246330040511, guid: d3001f426c99ec44a8445330b250f113, type: 3}
+  currentGold: 23
+--- !u!114 &-8229830855097548531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957840491793314183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d2aff83764648499291ceffe06a211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMarkerNames:
+  - 
+  - Meet Npc2
+  - Nightmare
+  - 
+  - Open the Door
+  - Find Dino
+  - Dragon Conquer
+  - 
+  questMarkersComplete: 0000000000000000
+--- !u!1 &2853370019841447817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4270626328087074128}
+  - component: {fileID: 2909280416038406082}
+  m_Layer: 0
+  m_Name: Player3 Stat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4270626328087074128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2853370019841447817}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1957840491793314182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2909280416038406082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2853370019841447817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc77579dfcbd6dc4891f3da13a178bc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charName: Novo
+  playerLevel: 3
+  currentEXP: 543
+  expToNextLevel: 
+  maxLevel: 10
+  baseEXP: 1000
+  currentHP: 190
+  maxHP: 200
+  currentMP: 25
+  maxMP: 300
+  mpLvlBonus: 00000000
+  strength: 10
+  defence: 20
+  wpnPwr: 20
+  armrPwr: 20
+  equippedWpn: 
+  equippedArmr: 
+  charIamge: {fileID: 21300000, guid: e0ddba6d3fcf21f49949fcc95c849aac, type: 3}
+--- !u!1 &6064899654169455536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2818009589709805764}
+  - component: {fileID: 1888411072263349824}
+  m_Layer: 0
+  m_Name: Player2 Stat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2818009589709805764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6064899654169455536}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1957840491793314182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1888411072263349824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6064899654169455536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc77579dfcbd6dc4891f3da13a178bc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charName: Dece
+  playerLevel: 3
+  currentEXP: 543
+  expToNextLevel: 
+  maxLevel: 10
+  baseEXP: 1000
+  currentHP: 190
+  maxHP: 200
+  currentMP: 25
+  maxMP: 300
+  mpLvlBonus: 00000000
+  strength: 10
+  defence: 20
+  wpnPwr: 20
+  armrPwr: 20
+  equippedWpn: 
+  equippedArmr: 
+  charIamge: {fileID: 21300000, guid: e0ddba6d3fcf21f49949fcc95c849aac, type: 3}
 --- !u!1 &7572053919768010990
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,4 +314,4 @@ MonoBehaviour:
   armrPwr: 0
   equippedWpn: 
   equippedArmr: 
-  charIamge: {fileID: 0}
+  charIamge: {fileID: 7152930139536384079, guid: 4112efe354632496b8ad7998f69b4433, type: 3}

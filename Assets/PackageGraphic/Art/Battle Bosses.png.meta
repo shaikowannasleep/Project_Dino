@@ -206,6 +206,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Dragon 000
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 155
+        width: 177
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 512fda887459b5642ba72bd625d433e1
+      internalID: -1308174802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying 000
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 232
+        width: 107
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0401f12622804d5419221f12202c7d2d
+      internalID: 1891994605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -217,8 +259,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Dragon 000: -1308174802
       Dragon Battle: 21300012
       Dragon Overworld: 21300000
+      Flying 000: 1891994605
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

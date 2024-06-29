@@ -61,6 +61,17 @@ public class CharacterStat : MonoBehaviour
 
                 playerLevel++;
 
+                //determine whether to add to str or def based on odd or even
+                if (playerLevel % 2 == 0)
+                {
+                    strength++;
+                }
+                else
+                {
+                    defence++;
+                }
+
+
                 maxHP = Mathf.FloorToInt(maxHP * 1.05f);
                 Debug.Log(maxHP);
                 currentHP = maxHP;

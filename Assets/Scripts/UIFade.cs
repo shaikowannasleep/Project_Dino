@@ -16,7 +16,6 @@ public class UIFade : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
         if (instance == null)
         {
             instance = this;
@@ -28,27 +27,29 @@ public class UIFade : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        
-        // instance = this;
+
         DontDestroyOnLoad(gameObject);
 
     }
+
+    // Update is called once per frame
     void Update()
     {
+
         if (shouldFadeToBlack)
         {
             fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 1f, fadeSpeed * Time.deltaTime));
-            // If the alpha value has reached 1, turn off the shouldFadeToBlack flag
+
             if (fadeScreen.color.a == 1f)
             {
                 shouldFadeToBlack = false;
             }
         }
-        // If the shouldFadeFromBlack flag is set, gradually decrease the alpha value of the screen to 0
+
         if (shouldFadeFromBlack)
         {
             fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 0f, fadeSpeed * Time.deltaTime));
-            // If the alpha value has reached 0, turn off the shouldFadeFromBlack flag
+
             if (fadeScreen.color.a == 0f)
             {
                 shouldFadeFromBlack = false;
@@ -60,6 +61,7 @@ public class UIFade : MonoBehaviour
     {
         shouldFadeToBlack = true;
         shouldFadeFromBlack = false;
+
     }
 
     public void FadeFromBlack()

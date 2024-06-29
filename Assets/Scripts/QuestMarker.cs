@@ -12,26 +12,29 @@ public class QuestMarker : MonoBehaviour {
 
     public bool deactivateOnMarking;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(canMark && Input.GetButtonDown("Fire1"))
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (canMark && Input.GetButtonDown("Fire1"))
         {
             canMark = false;
             MarkQuest();
         }
-	}
+    }
 
     public void MarkQuest()
     {
-        if(markComplete)
+        if (markComplete)
         {
             QuestManager.instance.MarkQuestComplete(questToMark);
-        } else
+        }
+        else
         {
             QuestManager.instance.MarkQuestIncomplete(questToMark);
         }
