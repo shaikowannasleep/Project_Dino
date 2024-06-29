@@ -16,13 +16,15 @@ public class MainMenu : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
+        AudioManager.instance.PlayBGM(6);
         if (PlayerPrefs.HasKey("Current_Scene"))
         {
-            continueButton.SetActive(true);
+           // continueButton.SetActive(true);
         }
         else
         {
-            continueButton.SetActive(false);
+           // continueButton.SetActive(false);
         }
     }
 

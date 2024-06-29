@@ -768,7 +768,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 761068081
   m_SortingLayer: 3
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c886ad1c421ec402f832cd4b7b4b34f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1189,11 +1189,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 55941363149063628, guid: 85ab490ac19f90a4ba189b4b162ec19d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -9.89
       objectReference: {fileID: 0}
     - target: {fileID: 55941363149063628, guid: 85ab490ac19f90a4ba189b4b162ec19d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.94
       objectReference: {fileID: 0}
     - target: {fileID: 55941363149063628, guid: 85ab490ac19f90a4ba189b4b162ec19d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6523,9 +6523,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 761068081
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 2004452071, guid: 409271fcd8c92b04c82e448773d86e86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7461,9 +7461,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 761068081
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 597656148, guid: 409271fcd8c92b04c82e448773d86e86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8060,9 +8060,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 761068081
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 57d0f98ccb8b1436d9902332ec63e0a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

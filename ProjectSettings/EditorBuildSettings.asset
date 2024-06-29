@@ -24,12 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Cave.unity
     guid: b46fbe118c249fc45b7317b58523ce95
   - enabled: 1
-    path: Assets/Scenes/Boss Cave.unity
-    guid: f6ddb853f46a6864db8112d72d3299ef
-  - enabled: 1
     path: Assets/Scenes/LoadingScene.unity
     guid: 14623293ef22ce948a225ac3a001cfa1
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 38178af9dc3fa8d49851ea2a3d9ece19
+  - enabled: 1
+    path: Assets/Scenes/Boss Cave.unity
+    guid: f6ddb853f46a6864db8112d72d3299ef
   m_configObjects: {}
