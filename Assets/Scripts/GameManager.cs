@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public CharacterStat[] playerStats;
+    public CharStats[] playerStats;
 
 
 
     public bool gameMenuOpen;
     public bool dialogActive;
     public bool fadingBetweenAreas;
-    // public bool activeInventoryOpen;
+    public bool battleActive;
     public bool shopActive;
 
     // Variables to store item information
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (gameMenuOpen || dialogActive || fadingBetweenAreas || shopActive )
+        if (gameMenuOpen || dialogActive || fadingBetweenAreas || shopActive || battleActive)
         {
             PlayerController.instance.canMove = false;
         }

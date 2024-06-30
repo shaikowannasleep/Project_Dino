@@ -14,7 +14,7 @@ public class GameMenu : MonoBehaviour
 
     public GameObject[] windows;
 
-    private CharacterStat[] playerStats;
+    private CharStats[] playerStats;
 
     public Text[] nameText, hpText, mpText, lvlText, expText;
     public Slider[] expSlider;

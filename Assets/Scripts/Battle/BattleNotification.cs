@@ -9,6 +9,7 @@ public class BattleNotification : MonoBehaviour {
     private float awakeCounter;
     public Text theText;
 
+	
 	// Update is called once per frame
 	void Update () {
 		if(awakeCounter > 0)

@@ -20,9 +20,9 @@ public class QuestManager : MonoBehaviour {
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.Q))
         {
-            Debug.Log(CheckIfComplete("Meet Npc2"));
+            //Debug.Log(CheckIfComplete("Meet Npc2"));
             MarkQuestComplete("Meet Npc2");
-            Debug.Log(CheckIfComplete("Open the Door"));
+           // Debug.Log(CheckIfComplete("Open the Door"));
             MarkQuestComplete("Open the Door");
             // MarkQuestIncomplete("fight the demon");
         }

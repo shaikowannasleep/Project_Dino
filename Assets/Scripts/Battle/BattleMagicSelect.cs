@@ -10,6 +10,15 @@ public class BattleMagicSelect : MonoBehaviour {
     public Text nameText;
     public Text costText;
 
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
 
     public void Press()
     {

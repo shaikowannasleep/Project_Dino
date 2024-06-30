@@ -114,10 +114,6 @@ public class PlayerController : MonoBehaviour
     void MoveCharacter()
     {
         change.Normalize();
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-           // IncreasedSpeed();
-        }
         theRB.MovePosition(
              transform.position + (Time.deltaTime * moveSpeed * change)
             );

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CharacterStat : MonoBehaviour
 {
-
     public string charName;
     public int playerLevel = 1;
     public int currentEXP;
@@ -24,7 +23,8 @@ public class CharacterStat : MonoBehaviour
     public string equippedWpn;
     public string equippedArmr;
     public Sprite charIamge;
-    // Start is called before the first frame update
+
+    // Use this for initialization
     void Start()
     {
         expToNextLevel = new int[maxLevel];
@@ -34,20 +34,17 @@ public class CharacterStat : MonoBehaviour
         {
             expToNextLevel[i] = Mathf.FloorToInt(expToNextLevel[i - 1] * 1.05f);
         }
-
-}
+    }
 
     // Update is called once per frame
     void Update()
     {
 
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-                AddExp(1000);
-            }
-        
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            AddExp(1000);
+        }
     }
-
 
     public void AddExp(int expToAdd)
     {
@@ -71,13 +68,10 @@ public class CharacterStat : MonoBehaviour
                     defence++;
                 }
 
-
                 maxHP = Mathf.FloorToInt(maxHP * 1.05f);
-                Debug.Log(maxHP);
                 currentHP = maxHP;
 
-               // maxMP += mpLvlBonus[playerLevel];
-
+                maxMP += mpLvlBonus[playerLevel];
                 currentMP = maxMP;
             }
         }

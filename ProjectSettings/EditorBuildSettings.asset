@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 8fb51dfc0c3447546aa6e62ebe0c8687
   - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: 14623293ef22ce948a225ac3a001cfa1
+  - enabled: 1
     path: Assets/Scenes/Countryside.unity
     guid: ae60441925334924aa23e5f811df151d
   - enabled: 1
@@ -23,9 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cave.unity
     guid: b46fbe118c249fc45b7317b58523ce95
-  - enabled: 1
-    path: Assets/Scenes/LoadingScene.unity
-    guid: 14623293ef22ce948a225ac3a001cfa1
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 38178af9dc3fa8d49851ea2a3d9ece19
