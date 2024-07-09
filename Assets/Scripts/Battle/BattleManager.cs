@@ -420,9 +420,6 @@ public class BattleManager : MonoBehaviour
             int fleeSuccess = Random.Range(0, 100);
             if (fleeSuccess < chanceToFlee)
             {
-                //end the battle
-                //battleActive = false;
-                //battleScene.SetActive(false);
                 fleeing = true;
                 StartCoroutine(EndBattleCo());
             }
@@ -451,6 +448,7 @@ public class BattleManager : MonoBehaviour
 
         for (int i = 0; i < activeBattlers.Count; i++)
         {
+            // Save player stats if needed       
             if (activeBattlers[i].isPlayer)
             {
                 for (int j = 0; j < GameManager.instance.playerStats.Length; j++)
@@ -461,15 +459,22 @@ public class BattleManager : MonoBehaviour
                         GameManager.instance.playerStats[j].currentMP = activeBattlers[i].currentMP;
                     }
                 }
+
             }
 
-            // Destroy(activeBattlers[i].gameObject);
+            DestroyImmediate(activeBattlers[i].gameObject);
+
+          //  Destroy(activeBattlers[i].gameObject);
           //  DestroyImmediate(activeBattlers[i].gameObject, true);
         }
 
-        UIFade.instance.FadeFromBlack();
-        battleScene.SetActive(false);
         activeBattlers.Clear();
+        UIFade.instance.FadeFromBlack();
+
+        battleScene.SetActive(false);
+
+        
+
         currentTurn = 0;
         //GameManager.instance.battleActive = false;
         if (fleeing)

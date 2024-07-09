@@ -66,10 +66,12 @@ public class PlayerController : MonoBehaviour
     {
         if (canMove)
         {
+            //HandleSpeedBoost();
             theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveSpeed;
             change = Vector3.zero;
             change.x = Input.GetAxisRaw("Horizontal");
             change.y = Input.GetAxisRaw("Vertical");
+            change.Normalize();
             if (Input.GetButtonDown("attack") && currentState != PlayerState.attack )
             {
                 StartCoroutine(AttackCoroutine());
@@ -78,6 +80,7 @@ public class PlayerController : MonoBehaviour
             {
                 UpdateAnimationAndMove();
             }
+            
         }
         else
         {
@@ -108,33 +111,48 @@ public class PlayerController : MonoBehaviour
             myAnim.SetBool("isMoving", false);
         }
     }
+
     [SerializeField]
     private float speedMultiplier = 4f; 
 
     void MoveCharacter()
     {
-        change.Normalize();
-        theRB.MovePosition(
+        //change.Normalize();
+        /* theRB.MovePosition(
              transform.position + (Time.deltaTime * moveSpeed * change)
-            );
+            ); */
+
+        Vector3 newPosition = transform.position + change * moveSpeed * Time.deltaTime;
+        theRB.MovePosition(newPosition);
+
     }
 
-   
-  
+
+
     public void IncreasedSpeed()
     {
         isSpeedIncreased = !isSpeedIncreased;
 
         if (isSpeedIncreased)
         {
-            // Tăng tốc độ di chuyển lên
             PlayerController.instance.moveSpeed *= speedMultiplier;
         }
         else
         {
-            // Đặt lại tốc độ di chuyển về bình thường
+            
             PlayerController.instance.moveSpeed /= speedMultiplier;
         }
     }
 
+    private void HandleSpeedBoost()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            IncreasedSpeed();
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            IncreasedSpeed();
+        }
+    }
 }

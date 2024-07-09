@@ -1549,7 +1549,7 @@ MonoBehaviour:
   - {fileID: 8620259639258657433}
   - {fileID: 8814375614211915001}
   battleNotice: {fileID: 6968327912803512856}
-  chanceToFlee: 70
+  chanceToFlee: 100
   gameOverScene: GameOver
   rewardXP: 500
   rewardItems:
@@ -2653,7 +2653,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Target Name
+  m_Text: Eyeball
 --- !u!1 &1447642923177204
 GameObject:
   m_ObjectHideFlags: 0
@@ -3224,7 +3224,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Target Name
+  m_Text: Eyeball
 --- !u!1 &1547006174317424
 GameObject:
   m_ObjectHideFlags: 0
