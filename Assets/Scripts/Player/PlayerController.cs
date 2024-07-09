@@ -112,8 +112,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    [SerializeField]
-    private float speedMultiplier = 4f; 
+   
 
     void MoveCharacter()
     {
@@ -122,12 +121,14 @@ public class PlayerController : MonoBehaviour
              transform.position + (Time.deltaTime * moveSpeed * change)
             ); */
 
-        Vector3 newPosition = transform.position + change * moveSpeed * Time.deltaTime;
-        theRB.MovePosition(newPosition);
-
+        Vector3 newPosition = transform.position + change * moveSpeed * Time.fixedDeltaTime;
+        Debug.Log(newPosition);
+       theRB.MovePosition(newPosition);
+       // transform.position = transform.position + change * moveSpeed * Time.deltaTime;
     }
 
-
+    [SerializeField]
+    private float speedMultiplier = 4f;
 
     public void IncreasedSpeed()
     {
