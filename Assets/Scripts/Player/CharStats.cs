@@ -19,10 +19,10 @@ public class CharStats : MonoBehaviour
     public int[] mpLvlBonus;
     public int strength;
     public int defence;
-    public int wpnPwr;
-    public int armrPwr;
-    public string equippedWpn;
-    public string equippedArmr;
+    public int weaponPower;
+    public int armorPower;
+    public string equippedWeapon;
+    public string equippedArmor;
     public Sprite charIamge;
 
     // Use this for initialization
@@ -60,7 +60,7 @@ public class CharStats : MonoBehaviour
                 playerLevel++;
 
                 //determine whether to add to str or def based on odd or even
-                if (playerLevel % 2 == 0)
+                if (playerLevel % 2 == 0)  // if remainder is 0, then it's even
                 {
                     strength++;
                 }

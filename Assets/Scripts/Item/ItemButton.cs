@@ -33,7 +33,7 @@ public class ItemButton : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogWarning("One or more required objects or variables are null or out of range.");
+                   // Debug.LogWarning("One or more required objects or variables are null or out of range.");
                 }
             }
 
@@ -45,13 +45,13 @@ public class ItemButton : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogWarning("One or more required objects or variables are null or out of range.");
+                    //Debug.LogWarning("One or more required objects or variables are null or out of range.");
                 }
             }
         }
         else
         {
-            Debug.LogWarning("Shop.instance or Shop.instance.shopMenu is null.");
+           // Debug.LogWarning("Shop.instance or Shop.instance.shopMenu is null.");
         }
     }
 }

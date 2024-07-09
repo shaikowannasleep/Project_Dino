@@ -1486,9 +1486,7 @@ MonoBehaviour:
   - {fileID: 1718820226139854958, guid: dc3408df2e0a65d49a7f96dc3a466dac, type: 3}
   - {fileID: 6728968637539957190, guid: 82bf5cef04a10014da589b9ac495b73e, type: 3}
   - {fileID: 1701329566449186121, guid: 50dfc597023a36844b3918cbbcd96036, type: 3}
-  activeBattlers:
-  - {fileID: 3924774514790317910, guid: 8adfb2e4a6b45a8438711b204b0a0a96, type: 3}
-  - {fileID: 2632883616679236111, guid: b82715a2b9128d84ab59ca16f4b6ed16, type: 3}
+  activeBattlers: []
   currentTurn: 0
   turnWaiting: 0
   uiButtonsHolder: {fileID: 1695574381629516}

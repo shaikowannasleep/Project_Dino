@@ -61,9 +61,9 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T)) // Use for testing
         {
-            BattleStart(new string[] { "Eyeball" }, false);
+            BattleStart(new string[] { "Eyeball", "Spider", "Skeleton" }, false);
         }
 
         if (battleActive)
@@ -125,8 +125,8 @@ public class BattleManager : MonoBehaviour
                             activeBattlers[i].maxMP = thePlayer.maxMP;
                             activeBattlers[i].strength = thePlayer.strength;
                             activeBattlers[i].defence = thePlayer.defence;
-                            activeBattlers[i].wpnPower = thePlayer.wpnPwr;
-                            activeBattlers[i].armrPower = thePlayer.armrPwr;
+                            activeBattlers[i].wpnPower = thePlayer.weaponPower;
+                            activeBattlers[i].armrPower = thePlayer.armorPower;
                         }
                     }
 
@@ -342,7 +342,7 @@ public class BattleManager : MonoBehaviour
         DealDamage(selectedTarget, movePower);
 
         uiButtonsHolder.SetActive(false);
-        //targetMenu.SetActive(false);
+        targetMenu.SetActive(false);
 
         NextTurn();
 
@@ -373,7 +373,7 @@ public class BattleManager : MonoBehaviour
             }
             else
             {
-               // targetButtons[i].gameObject.SetActive(false);
+                targetButtons[i].gameObject.SetActive(false);
             }
         }
     }

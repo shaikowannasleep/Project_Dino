@@ -145,16 +145,16 @@ public class GameMenu : MonoBehaviour
         statusMP.text = "" + playerStats[selected].currentMP + "/" + playerStats[selected].maxMP;
         statusStr.text = playerStats[selected].strength.ToString();
         statusDef.text = playerStats[selected].defence.ToString();
-        if (playerStats[selected].equippedWpn != "")
+        if (playerStats[selected].equippedWeapon != "")
         {
-            statusWpnEqpd.text = playerStats[selected].equippedWpn;
+            statusWpnEqpd.text = playerStats[selected].equippedWeapon;
         }
-        statusWpnPwr.text = playerStats[selected].wpnPwr.ToString();
-        if (playerStats[selected].equippedArmr != "")
+        statusWpnPwr.text = playerStats[selected].weaponPower.ToString();
+        if (playerStats[selected].equippedArmor!= "")
         {
-            statusArmrEqpd.text = playerStats[selected].equippedArmr;
+            statusArmrEqpd.text = playerStats[selected].equippedArmor;
         }
-        statusArmrPwr.text = playerStats[selected].armrPwr.ToString();
+        statusArmrPwr.text = playerStats[selected].armorPower.ToString();
         statusExp.text = (playerStats[selected].expToNextLevel[playerStats[selected].playerLevel] - playerStats[selected].currentEXP).ToString();
         statusImage.sprite = playerStats[selected].charIamge;
 
@@ -171,7 +171,7 @@ public class GameMenu : MonoBehaviour
 
             itemButtons[i].buttonValue = i;
 
-            if (!string.IsNullOrEmpty(GameManager.instance.itemsHeld[i]))
+            if (GameManager.instance.itemsHeld[i] != "")
             {
                 itemButtons[i].buttonImage.gameObject.SetActive(true);
                 itemButtons[i].buttonImage.sprite = GameManager.instance.GetItemDetails(GameManager.instance.itemsHeld[i]).itemSprite;
